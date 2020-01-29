@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="css/MarkerCluster.css" />
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section> 
+
+      <header> 
+        <h1>Louer votre Vélib'</h1>
+      </header> 
+        <div id="slideshow">
+
+          <button id="buttonLeft"><span class="chevron left"></span></button> 
+          <button id="buttonRight"><span class="chevron right"></span></button> 
+          <button class="controls" id="pause">Pause</button>
+          
+          <div id="slider">
+
+              <figure class="item">
+                  <img src="images/image1.png">
+              </figure>
+
+              <figure class="item">
+                  <img src="images/image2.png">
+              </figure>
+
+              <figure class="item">
+                  <img src="images/image3.jpg">
+              </figure> 
+              
+              <figure class="item">
+                  <img src="images/image4.jpg">
+              </figure> 
+
+              <figure class="item">
+                  <img src="images/image5.jpg">
+              </figure>
+
+          </div>
+        </div>
+    </section >
+        <section id="mapReservation">
+          <div id="mapid"></div>
+              
+          <div id="infoStation"> 
+
+            <h1>Informations sur la station :</h1>
+                  
+              <ul id="listInfo">
+                  <li>Nom : <span id="nameStation"></span></li>
+                  <li>Adresse : <span id="addressStation"></span></li>
+                  <li>Etat : <span id="stateStation"></span></li>
+                  <li>Vélos disponibles : <span id="bikeAvai"></span></li>
+                  <li>Stand disponibles : <span id="standAvai"></span></li>
+              </ul>
+              <form id="requiredfield">
+                Prénom:<br>
+                <input type="text" name="firstname" id="firstname"><br>
+                Nom:<br>
+                <input type="text" name="lastname" id="lastname">
+              </form>
+              <button id="buttonReservation">Réserver</button>
+              <button id="buttonCancel">Annuler</button>
+              <p id="messageError" class="message" style="display: none;">La réservation est impossible à cette station</p>
+
+          </div> 
+        </section>
+
+      <div id="messageConfirmationLeasing" class="message" style="display: none;">
+        Votre réservation est bien enregistrer
+      </div>
+      <div id="cancellationReservation" class="message" style="display: none;">
+          Réservation annuler
+      </div>
+    <section id="sectionLeasing" style="display: none;"> 
+      <header> 
+        <span></span><h1>Réservation en cours</h1>
+      </header> 
+
+      <div id="messageLeasing">
+        <p>
+        Vous venez de réserver un vélo à la station : <strong> <span id="leasingStation"> </strong><br>
+        </p>
+        <p> La réservation ce terminera dans : <span id="clockspan"> </span></p>
+        <img id="sig-image-reservation" src="" alt="Votre signature s'affiche ici"/>
+      </section>
+      <section>
+        <div id="containercanvas">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Reservation</h1>
+              <p>Dessine en dessous et sauvegarde ta signature comme image</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+               <canvas id="sig-canvas" width="620" height="160">
+                 Prenez un navigateur plus récent
+               </canvas>
+             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-primary" id="sig-submitBtn">Envoyer Signature</button>
+              <button class="btn btn-default" id="sig-clearBtn">Nettoyer Signature</button>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea id="sig-dataUrl" class="form-control" rows="5">L'url de votre signature s'affiche ici</textarea>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="imagesReservation">
+              <img id="sig-image" src="" alt="Votre signature s'affiche ici"/>
+            </div>
+          </div>
+        </div>
+        <button id="toggle">Réservation</button>
+      </section>
+      <script src="/polyfill.bundle.js"></script>
+      <script src="/app.bundle.js"></script>
+      <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
+      
+
