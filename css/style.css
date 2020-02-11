@@ -23,6 +23,7 @@
 {
 list-style:none;
 }
+
 /*slider*/
 * {
     margin: 0;
@@ -30,7 +31,7 @@ list-style:none;
 }
 #slideshow {
     position: relative;
-    width: 50%;
+    width: 64%;
     margin: 2% auto;
 }
 figure {
@@ -160,4 +161,15 @@ div {
 }
 #toggle{
     display:none;
+}
+/*reservation*/
+
+#sectionLeasing header{
+    text-align: center;
+}
+#sectionLeasing p{
+    text-align: center;
+}
+#sectionLeasing img{
+    justify-content: center;
 }
