@@ -24,6 +24,9 @@ export default class Reservation{
     document.getElementById("buttonCancel").addEventListener("click", ()=>{
       this.buttonCancel();
     })
+    document.addEventListener("timerEnd",()=>{
+      this.buttonCancel();
+    })
     }
     
     nameLocalstorage (){//si un local storage est présent cela rentre les valeurs dans le champ firstname/lastname
@@ -69,7 +72,7 @@ export default class Reservation{
       let reservation = JSON.parse(sessionStorage.getItem("reservation"));
       if(reservation !== null){
         document.getElementById("sectionLeasing").style.display = "block";
-        document.getElementById("leasingStation").innerHTML = reservation.station.name,reservation.signatureUrl;
+        document.getElementById("leasingStation").innerHTML = reservation.station.name;
         document.getElementById("sig-image-reservation").src = reservation.signatureUrl;
         document.getElementById("buttonCancel").style.display = "block";
       }

@@ -37,8 +37,8 @@ export default class Timer {
 			clearInterval(this.interval);
 			this.button.style.visibility ="visible";
 			document.getElementById("buttonCancel").style.display = "none";
-			let reservationTimer = new Reservation();
-			reservationTimer.buttonCancel();
+			let event = new Event ("timerEnd")
+			document.dispatchEvent(event);
 		}
 	}
 
