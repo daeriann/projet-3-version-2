@@ -30,8 +30,8 @@ export default class Reservation{
       this.firstname = this.firstnameLocalstorage
       this.lastname  = this.lastnameLocalstorage
     if( this.firstnameLocalstorage !== null || this.lastnameLocalstorage !== null){
-    document.getElementById("firstname").value = this.firstnameLocalstorage;
-    document.getElementById("lastname").value = this.lastnameLocalstorage ;
+      document.getElementById("firstname").value = this.firstnameLocalstorage;
+      document.getElementById("lastname").value = this.lastnameLocalstorage ;
     };
     }
 

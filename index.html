@@ -14,10 +14,11 @@
   </head>
   <body>
     <!--Slider-->
-    <section> 
+    <section id="diapo"> 
 
       <header> 
         <img src="images/téléchargement.png">
+        <p>Location de vélo à Toulouse</p>
       </header> 
 
         <div id="slideshow">
@@ -114,27 +115,27 @@
             </canvas>
           </div>
         </div>
-          <div class="row">
-            <div class="col-md-12">
-              <button class="btn btn-primary" id="sig-submitBtn">Envoyer Signature</button>
-              <button class="btn btn-default" id="sig-clearBtn">Nettoyer Signature</button>
-            </div>
-          </div>
-          <br/>
-          <div class="row">
-            <div class="col-md-12">
-              <textarea id="sig-dataUrl" class="form-control" rows="5">L'url de votre signature s'affiche ici</textarea>
-            </div>
-          </div>
-          <br/>
-          <div class="row">
-            <div class="imagesReservation">
-              <img id="sig-image" src="" alt="Votre signature s'affiche ici"/>
-            </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-primary" id="sig-submitBtn">Envoyer Signature</button>
+            <button class="btn btn-default" id="sig-clearBtn">Nettoyer Signature</button>
           </div>
         </div>
-        <button id="toggle">Réservation</button>
-      </section>
+        <br/>
+        <div class="row">
+          <div class="col-md-12">
+            <textarea id="sig-dataUrl" class="form-control" rows="5">L'url de votre signature s'affiche ici</textarea>
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="imagesReservation">
+            <img id="sig-image" src="" alt="Votre signature s'affiche ici"/>
+          </div>
+        </div>
+      </div>
+      <button id="toggle">Réservation</button>
+    </section>
       <script src="/polyfill.bundle.js"></script>
       <script src="/app.bundle.js"></script>
       <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>

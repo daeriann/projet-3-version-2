@@ -59,7 +59,7 @@ export default class Map{
 			markers.addLayer(marker);
 		});
 	this.mymap.addLayer(markers);
-		}
+	}
 }
 
 
