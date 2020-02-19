@@ -1,19 +1,22 @@
 /*map*/
 #mapid 
 { 
-	width: 800px;
-    height: 800px;
+    width: 950px;
     position: relative;
     outline: none;
-    margin-left: 25%;
+    margin: 2em auto;
+    box-shadow: 5px 5px 10px 0 #c0c0c0;
 }
 #infoStation
  {
-    display:block;
-    border: solid 1px;
-    width: 300px;
-    min-height: 250px;
-    box-shadow: 2px 1px 1px black;
+    padding: 1em;
+    min-height: 600px;
+    margin: 2em auto;
+    box-shadow: 5px 5px 10px 0 #c0c0c0;
+}
+#infoStation a
+ {
+    text-decoration: none;
 }
 #mapReservation
 {
@@ -21,9 +24,16 @@
 }
 #listInfo
 {
-list-style:none;
+    list-style:none;
 }
-
+#listInfo li
+{
+    padding: .75rem;
+}
+#requiredfield
+{
+    padding: .75rem;
+}
 /*slider*/
 * {
     margin: 0;
@@ -31,8 +41,9 @@ list-style:none;
 }
 #diapo header {
     background-color:#A5282B;
-    font-size: 55px;
     display: flex;
+    font-size: 3.9rem;
+    color: #fff;
 }
 #slideshow {
     position: relative;
@@ -134,11 +145,11 @@ div {
     border: none;
     color: #fff;
     height: 40px;
-    width: 60px;
-    border-radius: 0%;
+    width: 100px;
     cursor: pointer;
     display:none;
 }
+
 #buttonCancel
 {
     z-index: 2;
@@ -146,8 +157,7 @@ div {
     border: none;
     color: #fff;
     height: 40px;
-    width: 60px;
-    border-radius: 0%;
+    width: 100px;
     cursor: pointer;
     display:none;
 }
@@ -163,6 +173,12 @@ div {
 }
 #sig-submitBtn{
     display:none;
+}
+#sig-dataUrl{
+    display: none;
+}
+#sig-image{
+    display: none;
 }
 #toggle{
     display:none;

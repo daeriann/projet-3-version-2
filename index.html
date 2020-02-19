@@ -16,7 +16,7 @@
     <!--Slider-->
     <section id="diapo"> 
 
-      <header> 
+      <header id="websiteTitle"> 
         <img src="images/téléchargement.png">
         <p>Location de vélo à Toulouse</p>
       </header> 
@@ -68,12 +68,12 @@
               <li>Stand disponibles : <span id="standAvai"></span></li>
             </ul>
           <form id="requiredfield">
-            Prénom:<br>
-            <input type="text" name="firstname" id="firstname"><br>
-            Nom:<br>
+            <p>Prénom:</p>
+            <input type="text" name="firstname" id="firstname">
+            <p>Nom:</p>
             <input type="text" name="lastname" id="lastname">
           </form>
-          <button id="buttonReservation">Réserver</button>
+          <a href="#containercanvas"><button id="buttonReservation">Réserver</button></a>
           <button id="buttonCancel">Annuler</button>
           <p id="messageError" class="message" style="display: none;">La réservation est impossible à cette station</p>
 
