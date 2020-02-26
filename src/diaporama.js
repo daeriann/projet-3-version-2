@@ -24,7 +24,7 @@ export  default class Diaporama {
 
     next()  {
         this.items[this.imageNum].style.opacity = "0";
-        if(this.imageNum === 4) {
+        if(this.imageNum === 3) {
             this.imageNum = 0;
         } else {
             this.imageNum++;
@@ -35,7 +35,7 @@ export  default class Diaporama {
     previous (){
         this.items[this.imageNum].style.opacity = "0";
         if(this.imageNum === 0) {
-            this.imageNum = 4;
+            this.imageNum = 3;
         } else {
             this.imageNum--;
         }
