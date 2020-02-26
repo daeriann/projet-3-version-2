@@ -23,23 +23,23 @@ export  default class Diaporama {
     }
 
     next()  {
-        this.items[this.imageNum].style.opacity = "0";
+        this.items[this.imageNum].style.display = "none";
         if(this.imageNum === 3) {
             this.imageNum = 0;
         } else {
             this.imageNum++;
         }
-        this.items[this.imageNum].style.opacity = "1";
+        this.items[this.imageNum].style.display = "block";
     }
 
     previous (){
-        this.items[this.imageNum].style.opacity = "0";
+        this.items[this.imageNum].style.display = "none";
         if(this.imageNum === 0) {
             this.imageNum = 3;
         } else {
             this.imageNum--;
         }
-        this.items[this.imageNum].style.opacity = "1";
+        this.items[this.imageNum].style.display = "block";
     }
 
     autoplay() {
