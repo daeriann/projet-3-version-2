@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
     integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
     crossorigin=""/>
@@ -17,36 +18,36 @@
     <section id="diapo"> 
 
       <header id="websiteTitle"> 
-        <img src="images/téléchargement.png">
+        <img src="images/logo.png">
         <p>Location de vélo à Toulouse</p>
       </header> 
 
-        <div id="slideshow">
+      <div id="slideshow">
 
           <button id="buttonLeft"><span class="chevron left"></span></button> 
           <button id="buttonRight"><span class="chevron right"></span></button> 
           <button class="controls" id="pause">Pause</button>
           
-          <div id="slider">
+        <div id="slider">
 
-            <figure class="item">
-              <img src="images/image1.png">
-            </figure>
+          <figure class="item">
+            <img src="images/image1.png">
+          </figure>
 
-            <figure class="item" style="display:none" >
-              <img src="images/image2.png">
-            </figure>
+          <figure class="item" style="display:none" >
+            <img src="images/image2.png">
+          </figure>
 
-            <figure class="item" style="display:none">
-              <img src="images/image3.png">
-            </figure> 
+          <figure class="item" style="display:none">
+             <img src="images/image3.png">
+          </figure> 
               
-            <figure class="item" style="display:none">
-              <img src="images/image4.png">
-            </figure> 
+          <figure class="item" style="display:none">
+            <img src="images/image4.png">
+          </figure> 
 
-          </div>
         </div>
+      </div>
     </section >
 <!--Map-->
     <section id="mapReservation">
@@ -109,12 +110,13 @@
       </div>
     </section>
 
-      <div id="messageConfirmationLeasing" class="message" style="display: none;">
-        Votre réservation est bien enregistrer
-      </div>
-      <div id="cancellationReservation" class="message" style="display: none;">
-          Réservation annuler
+    <div id="messageConfirmationLeasing" class="message" style="display: none;">
+      Votre réservation est bien enregistrer
     </div>
+    <div id="cancellationReservation" class="message" style="display: none;">
+      Réservation annuler
+    </div>
+
     <section id="sectionLeasing" style="display: none;"> 
       <header> 
         <span></span><h1>Réservation en cours</h1>
@@ -128,10 +130,10 @@
         <img id="sig-image-reservation" src="" alt="Votre signature s'affiche ici"/>
       </div>
     </section>
-      <script src="/polyfill.bundle.js"></script>
-      <script src="/app.bundle.js"></script>
-      <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
-	    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="dist/polyfill.bundle.js"></script>
+    <script src="dist/app.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
       

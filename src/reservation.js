@@ -30,8 +30,8 @@ export default class Reservation{
     }
     
     nameLocalstorage (){//si un local storage est présent cela rentre les valeurs dans le champ firstname/lastname
-      this.firstname = this.firstnameLocalstorage
-      this.lastname  = this.lastnameLocalstorage
+      //this.firstname = this.firstnameLocalstorage
+      //this.lastname  = this.lastnameLocalstorage
     if( this.firstnameLocalstorage !== null || this.lastnameLocalstorage !== null){
       document.getElementById("firstname").value = this.firstnameLocalstorage;
       document.getElementById("lastname").value = this.lastnameLocalstorage ;
@@ -39,7 +39,8 @@ export default class Reservation{
     }
 
     requiredField(){//si aucune valeur n'est rentré affiche un message sinon sauvegarde et fait apparaitre les éléments
-    if (this.firstname.value =="" || this.lastname.value =="") {
+    console.log(this);
+    if (this.firstname.value ==null || this.lastname.value ==null) {
       alert("veuillez remplir les champs requis");
       return false;
     }
@@ -87,6 +88,8 @@ export default class Reservation{
         document.getElementById("sig-submitBtn").style.display = "none";
         this.signature.sigText.innerHTML = "Data URL for your signature will go here!"
         this.signature.sigImage.setAttribute("src","")
+        let timerReset = new Timer()
+        timerReset.clearInterval();
     }
 
     saveTimer(){//sauvagarde du timer avec un timestamp
